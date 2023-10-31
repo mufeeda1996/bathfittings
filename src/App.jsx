@@ -75,7 +75,7 @@ const App = () => {
         altTxt='luxury transportation services - abu dhabi'
         isFullWidthHero={true}
         title='Industrial equipment and
-        components from Europe'
+        components through global sourcing'
         description='We supply industrial equipment
         and spare parts for companies from all over the world'
       />
@@ -83,7 +83,7 @@ const App = () => {
         <Features features={features} />
       </Container>
       <About image={hero1}
-        altTxt='luxury transportation services - abu dhabi'
+        altTxt=''
         isFullWidthHero={true}
         title='We can compile your order
         according to your purchasing list.'

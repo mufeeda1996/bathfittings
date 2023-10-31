@@ -29,8 +29,8 @@ const Hero = ({
             item
             xs={10}
             sm={10}
-            md={5}
-            lg={5}
+            md={6}
+            lg={6}
             sx={{
               padding: { xs: "2rem 1rem" },
             }}
@@ -66,19 +66,7 @@ const Hero = ({
               padding: "1rem",
             }}
           >
-            {/* <Grid container spacing={{ xs: 2 }}>
-              {titleCards.map((item, index) => (
-                <Grid item xs={12} key={index}>
-                  <Link href={item.link} underline="none">
-                    <TitleCard
-                      image={item.image}
-                      title={item.title}
-                      cardId={index}
-                    />
-                  </Link>
-                </Grid> */}
-              {/* ))}
-            </Grid> */}
+           
           </Grid>
         </Grid>
     

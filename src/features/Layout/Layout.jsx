@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
 import React from "react";
-import Addressbar from "../../components/Addressbar/Addressbar";
+import Addressbar from "../../Components/Addressbar/Addressbar";
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from "../../Components/Footer/Footer";
 import logo from '../../Image/logo.png'

@@ -3,6 +3,8 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import Grid from '@mui/material/Grid'
+import logo from '../../Image/logo12.png'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import { Facebook, Instagram, Twitter } from '@mui/icons-material'
 import { Box ,Divider} from '@mui/material'
@@ -32,6 +34,21 @@ export default function Footer () {
             <Typography variant='body2' color='text.secondary'>
               Email: sales@lhtech-me.com
             </Typography>
+            <Box
+            sx={{
+              svg: { fontSize: "24px" },
+              display: "flex",
+              flexDirection: "row",
+              
+              margin: ".5rem 0",
+            }}
+          >
+            <WhatsAppIcon sx={{ color: "text.secondary" }} />
+            <Typography sx={{ fontSize: "17px", width: "150px", color: "text.secondary" }}>
+              {" "}
+              +971 58 560 1448
+            </Typography>
+          </Box>
           </Grid>
           <Grid item xs={12} sm={4} >
             <Typography variant='h6' color='text.primary' gutterBottom>

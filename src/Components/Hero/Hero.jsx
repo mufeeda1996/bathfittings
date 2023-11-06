@@ -4,7 +4,8 @@ import logo from '../../Image/logo_mobile.png'
 const Hero = ({
   image,
   title,
-  description
+  description,
+  description2
 }) => {
   return (
     <>
@@ -29,8 +30,8 @@ const Hero = ({
             item
             xs={10}
             sm={10}
-            md={6}
-            lg={6}
+            md={5}
+            lg={5}
             sx={{
               padding: { xs: "2rem 1rem" },
             }}
@@ -39,9 +40,9 @@ const Hero = ({
               variant="h1"
               color= "white.dark"
               sx={{
-                marginBottom: {md:"3rem",xs:"0"},
-                marginTop:{md:"0",xs:"20rem"},
-                fontSize: {md:"2.5rem", xs: "1.5rem" },
+                marginBottom: {md:"2rem",xs:"0"},
+                marginTop:{md:"0",xs:"40rem"},
+                fontSize: {md:"2rem", xs: "2rem" },
               }}
             >
               {title}
@@ -49,9 +50,16 @@ const Hero = ({
             <Typography
               variant="body1"
               color="white.dark"
-              sx={{ marginBottom: "3rem" }}
+              sx={{ marginBottom: "2rem" }}
             >
               {description}
+            </Typography>
+            <Typography
+              variant="body1"
+              color="white.dark"
+              // sx={{ marginBottom: "2rem" }}
+            >
+              {description2}
             </Typography>
           </Grid>
           <Grid

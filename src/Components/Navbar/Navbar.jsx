@@ -1,42 +1,40 @@
 import React from 'react'
-import {AppBar, Box, Grid, Toolbar,useMediaQuery} from '@mui/material'
+import { AppBar, Box, Grid, Toolbar, useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
-    const theme = useTheme()
+  const navigate=useNavigate()
+  const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
-  const desktop=(
-    <Box sx={{backgroundColor:"secondary.main",color:"#ffffff"}}>
-        <AppBar position='static'>
-            <Toolbar >
-
-           
-         <Grid container spacing={2} justifyContent="space-evenly">
-          <Grid item md={2}>
-          Brands catalogue
+  const navItems = [
+    {label:'Home', url:"/"},
+    {label:'Products & Systems',url:"/productsystem"},
+    { label:'Certificate',url:"/certificate"},
+    {label:'Contact Us',url:"/contact"},
+    {label:'Submit a Request',url:"/submitrequest"}
+  ]
+  const desktop = (
+    <Box sx={{ backgroundColor: 'secondary.main', color: '#ffffff' }}>
+      <AppBar position='static'>
+        <Toolbar>
+          <Grid container spacing={2} justifyContent='space-evenly'>
+            {navItems.map((item, index) => {
+              return (
+                <>
+                  <Grid item md={2} key={index} onClick={() => navigate(item.url)} sx={{cursor:"pointer"}}>
+                    {item.label}
+                  </Grid>
+                </>
+              )
+            })}
           </Grid>
-          <Grid item md={2}>
-          Company
-          </Grid >
-          <Grid item md={2}>
-          Certificates
-          </Grid>
-          <Grid item md={2}>
-          Contacts
-          </Grid>
-          <Grid item md={2}>
-          Submit a request
-          </Grid>
-         </Grid>
-         </Toolbar>
-        </AppBar>
+        </Toolbar>
+      </AppBar>
     </Box>
   )
-  return (
-    <>
-    {isMobile ? null : desktop}
-    </>
-  )
+  return <>{isMobile ? null : desktop}</>
 }
 
 export default Navbar

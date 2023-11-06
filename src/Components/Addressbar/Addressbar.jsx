@@ -14,9 +14,7 @@ import { Grid, useMediaQuery , IconButton,
 import { useTheme } from '@mui/material/styles'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
-import SmartphoneIcon from '@mui/icons-material/Smartphone'
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import MailIcon from '@mui/icons-material/Mail'
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
@@ -25,7 +23,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import LanguageDropdown from './Language'
-import logo from '../../Image/logo.png'
+import logo from '../../Image/logo12.png'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -96,7 +94,7 @@ export default function Addressbar ({address,navItems}) {
           component='div'
           sx={{ display: { xs: 'none', sm: 'block',marginTop:"20px" } }}
         >
-          <img src={logo} width='250px'></img>
+          <img src={logo} width='150px'></img>
         </Typography>
       </Grid>
       <Grid item md={4}>
@@ -117,7 +115,7 @@ export default function Addressbar ({address,navItems}) {
       <Grid item md={3}>
         <Box sx={{ color: 'black' }}>
         {/* <SmartphoneIcon/><Typography> 9876543210</Typography> */}
-        {/* <Box
+        <Box
             sx={{
               svg: { fontSize: "24px" },
               display: "flex",
@@ -127,12 +125,12 @@ export default function Addressbar ({address,navItems}) {
               // padding: "5px",
             }}
           >
-            <SmartphoneIcon sx={{ color: "primary.dark" }} />
+            <WhatsAppIcon sx={{ color: "primary.dark" }} />
             <Typography sx={{ fontSize: "17px", width: "150px" }}>
               {" "}
-              +971 50 505 8724
+              +971 58 560 1448
             </Typography>
-          </Box> */}
+          </Box>
         {/* <MailIcon/>  <Typography> abc@gmail.com</Typography> */}
         <Box
             sx={{

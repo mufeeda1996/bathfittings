@@ -5,17 +5,30 @@ const Features = ({ features }) => {
   return (
     <>
       <Grid container justifyContent='flex-start'>
-        <Grid>
+        <Grid item md={6} xs={12}>
           <Typography
             variant='h4'
             sx={{
               fontSize: '2rem',
               fontWeight: '500',
               paddingBottom: '4rem',
-              fontFamily: 'Arial Narrow, sans-serif'
+            
             }}
           >
             Our values ensure quality of service
+            <Typography
+              sx={{
+                color: 'rgba(32,46,66,.7)',
+                width: '350px',
+                
+                fontSize: ' .875rem',
+                lineHeight: ' 1.25rem',
+                margin: '1.5rem .5rem'
+              }}
+            >
+              We are always commited to our fundamental principles and
+              continuously work on the service improvement.
+            </Typography>
           </Typography>
         </Grid>
         <Grid container spacing={4}>
@@ -26,11 +39,11 @@ const Features = ({ features }) => {
                   <Box
                     sx={{
                       width: '100%',
-                      height: '250px',
+                      height: '100%',
                       backgroundColor: '#ffffff',
-                      padding: '10px',backdropFilter: 'blur(100px)',
+                      padding: '10px',
+                      backdropFilter: 'blur(100px)',
                       boxShadow: '#454545 1px 2px 5px '
-
                     }}
                   >
                     <Box
@@ -43,7 +56,7 @@ const Features = ({ features }) => {
                         display: 'flex',
                         justifyContent: 'flex-start',
                         alignItems: 'center',
-                        margin:".5rem auto"
+                        margin: '.5rem auto'
                         // margin:"2rem 2rem"
                       }}
                     >
@@ -58,7 +71,7 @@ const Features = ({ features }) => {
                         fontWeight: '300',
                         display: 'flex',
                         justifyContent: 'flex-start',
-                        margin:"1.5rem 1rem"
+                        margin: '1.5rem 1rem'
                       }}
                     >
                       {item.title}
@@ -72,7 +85,7 @@ const Features = ({ features }) => {
                         fontFamily: 'Open Sans,sans-serif',
                         fontSize: ' .875rem',
                         lineHeight: ' 1.25rem',
-                        margin:"1.5rem 1rem"
+                        margin: '1.5rem 1rem'
                       }}
                     >
                       {item.description}

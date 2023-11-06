@@ -1,101 +1,66 @@
-import React from 'react'
-import Addressbar from './Components/Addressbar/Addressbar'
-import Hero from './Components/Hero/Hero'
-import Navbar from './Components/Navbar/Navbar'
-import homeHero from './Image/hero.png'
-import hero1 from './Image/hero1.png'
-import Features from './Components/Feature/Features'
-import { Container } from '@mui/material'
-import delivery from './Image/delivery.png'
-import loyality from './Image/loyality.png'
-import transparency from './Image/transparant.png'
-import experience from './Image/experience.png'
-import team from './Image/team.png'
-import guarantees from './Image/guarantees.png'
-import results from './Image/results.png'
-import About from './Components/About/About'
-import Footer from './Components/Footer/Footer'
-import logo from './Image/logo.png'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Home from "./features/Pages/Home";
+import ContactUs from "./features/Pages/ContactUs";
+import Certificate from "./features/Pages/Certificate";
+import ProductSystem from "./features/Pages/ProductSystem";
+import AboutUs from "./features/Pages/AboutUs";
+import Submit from "./features/Pages/Submit";
 
-const navItems = [
-  ' Brands catalogue',
-  'Company',
-  'Certificates',
-  'Contacts',
-  'Submit a request'
-]
-const address = ['Home', 'About', 'home']
-
-const features = [
-  {
-    title: 'Delivery time',
-    image: delivery,
-    description: `Due to our well-functioning logistics network, we can deliver the goods throughout the world within the shortest possible time.`
-  },
-  {
-    title: 'Loyalty',
-    image: loyality,
-    description: `We value our customers and always offer the best terms to our long-term clients.`
-  },
-  {
-    title: 'Transparency',
-    image: transparency,
-    description: `All deliveries are carried out in full compliance with the laws and product certification rules.`
-  },
-  {
-    title: 'Experience',
-    image:experience,
-    description: `More than 10 years at the industrial equipment market.`
-  },
-  {
-    title: 'Team of experts',
-    image: team,
-    description: `Our highly qualified specialists will help you choose the necessary equipment and bring it to your country`
-  },
-  {
-    title: 'Guarantees',
-    image: guarantees,
-    description: `All the goods are being covered under a manufacturer’s warranty.`
-  },
-  {
-    title: "Results",
-    image:results,
-    description: `With competitive pricing,offering value for money while
-     maintaining the highest standards of comfort,elegance,and personalised service.`,
-  },
-]
-
-const App = () => {
+function App() {
   return (
-    <div>
-      <Addressbar navItems={navItems} address={address} />
-      <Navbar />
-      <Hero
-        image={homeHero}
-        altTxt='luxury transportation services - abu dhabi'
-        isFullWidthHero={true}
-        title='Industrial equipment and
-        components through global sourcing'
-        description='We supply industrial equipment
-        and spare parts for companies from all over the world'
-      />
-      <Container maxWidth='lg' sx={{ margin: '3rem auto' }}>
-        <Features features={features} />
-      </Container>
-      <About image={hero1}
-        altTxt=''
-        isFullWidthHero={true}
-        title='We can compile your order
-        according to your purchasing list.'
-        description='This service offers more comfort for our customers. Just upload the list of equipment you need.
-        '/>
-         <Footer
-        logo={logo}
-        mail={"info@alameentransportsuae.com"}
-        copyright={"2023 - Al Ameen Transports L.L.C"}
-      />
-    </div>
-  )
+    <ReactCSSTransitionGroup
+        transitionAppear={true}
+        transitionAppearTimeout={600}
+        transitionEnterTimeout={600}
+        transitionLeaveTimeout={200}
+        transitionName="SlideIn"
+      > 
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/contact" element={<ContactUs />} />
+      <Route exact path="/certificate" element={<Certificate />} />
+      <Route exact path="/productsystem" element={<ProductSystem/>} />
+      <Route exact path="/submitrequest" element={<Submit/>} />
+      {/* <Route exact path="/passenger-transportation" element={<PassengerTransport />} />
+      <Route exact path="/school-transportation" element={<SchoolTransportation />} /> */}
+    </Routes>
+    </ReactCSSTransitionGroup>
+  );
 }
 
-export default App
+export default App;
+// import Button from '@mui/material/Button'
+// import { Grid, TextField, Typography } from '@mui/material'
+// import React from 'react'
+// import { display } from '@mui/system'
+
+// const Form = () => {
+//   return (
+//     <Grid container  backgroundColor= '#FB8C00' borderRadius="10px" spacing={1} width="50%">
+//       <Grid item md={7} xs={12}>
+//         <Typography sx={{width:"250px",fontSize:"1.5rem",fontWeight:"600",padding:".5rem"}}>Get Expert's Help</Typography>
+//       </Grid>
+//       <Grid item md={8} xs={12}>
+//         <Typography sx={{padding:".5rem"}}>
+//           Send Your query today our team would be happy to assit you at any time
+//         </Typography>
+//       </Grid>
+//       <Grid item md={10} xs={12}>
+//         <form>
+//           <TextField label='First Name' name='firstName' fullWidth />
+//           <TextField label='second name' name='second name' fullWidth />
+//           <TextField label='phone' name='phone' fullWidth />
+//           <TextField label='message' name='message' fullWidth />
+//           <Button variant='contained'
+//             color='primary'
+//             type='submit'
+//             sx={{ margin: '1rem' }}>send the query</Button>
+//         </form>
+//       </Grid>
+//     </Grid>
+//   )
+// }
+
+// export default Form

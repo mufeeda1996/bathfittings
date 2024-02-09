@@ -12,7 +12,7 @@ const Hero = ({
         <Grid
           container
           sx={{
-            backgroundImage: {md:`url(${image})`,xs:`url(${logo})`},
+            backgroundImage: {md:`url(${image})`,xs:`url(${image})`},
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: { md: "center" ,sm:"center"},
@@ -23,31 +23,33 @@ const Hero = ({
               md: "space-around",
             },
             alignItems: "flex-end",
-            padding:{md:"100px",sm:"10px"}
+            padding:{md:"10px",sm:"10px"}
           }}
         >
           <Grid
             item
             xs={10}
             sm={10}
-            md={5}
-            lg={5}
+            md={10}
+            
             sx={{
               padding: { xs: "2rem 1rem" },
             }}
           >
             <Typography
               variant="h1"
-              color= "white.dark"
+              color= "#ffffff"
               sx={{
                 marginBottom: {md:"2rem",xs:"0"},
                 marginTop:{md:"0",xs:"40rem"},
                 fontSize: {md:"2rem", xs: "2rem" },
+                fontWeight:"bold"
               }}
             >
               {title}
             </Typography>
-            <Typography
+            <hr style={{height:"3px",backgroundColor:"#ffffff"}}></hr>
+            {/* <Typography
               variant="body1"
               color="white.dark"
               sx={{ marginBottom: "2rem" }}
@@ -60,8 +62,9 @@ const Hero = ({
               // sx={{ marginBottom: "2rem" }}
             >
               {description2}
-            </Typography>
+            </Typography> */}
           </Grid>
+
           <Grid
             item
             xs={12}

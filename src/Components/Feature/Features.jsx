@@ -1,7 +1,23 @@
 import { Grid, Typography, Box } from '@mui/material'
+import { styled } from '@mui/system'
 import React from 'react'
 
-const Features = ({ features }) => {
+const Features = ({ features, heading, subHeading }) => {
+  const ContainerStyle = styled(Box)(({ theme }) => ({
+    position: 'relative',
+    maxWidth: '100%',
+    height: 'auto'
+  }))
+
+  const TextStyle = styled(Box)(({ theme }) => ({
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    textAlign: 'center',
+    color: 'white'
+  }))
+
   return (
     <>
       <Grid container justifyContent='flex-start'>
@@ -11,77 +27,88 @@ const Features = ({ features }) => {
             sx={{
               fontSize: '2rem',
               fontWeight: '500',
-              paddingBottom: '4rem',
-            
+              paddingBottom: '4rem'
             }}
           >
-            Our values ensure quality of service
+            {/* {heading} */}
             <Typography
               sx={{
                 color: 'rgba(32,46,66,.7)',
                 width: '350px',
-                
+
                 fontSize: ' .875rem',
                 lineHeight: ' 1.25rem',
                 margin: '1.5rem .5rem'
               }}
             >
-              We are always commited to our fundamental principles and
-              continuously work on the service improvement.
+              {/* {subHeading} */}
             </Typography>
           </Typography>
         </Grid>
-        <Grid container spacing={4}>
+        <Grid container spacing={1}>
           {features.map(item => {
             return (
               <>
-                <Grid item xs={12} md={4} sx={{ padding: '1rem' }}>
+                <Grid item xs={12} md={6} sx={{ padding: '1rem' }}>
                   <Box
                     sx={{
                       width: '100%',
-                      height: '100%',
-                      backgroundColor: '#ffffff',
-                      padding: '10px',
+                      minHeight: '100px',
+                      backgroundColor: 'whitesmoke',
                       backdropFilter: 'blur(100px)',
-                      boxShadow: '#454545 1px 2px 5px '
+                      boxShadow: '#003366 0px 0px 3px 3px'
                     }}
                   >
-                    <Box
-                      sx={{
-                        // backgroundColor: "primary.main",
+                    <ContainerStyle>
+                      <Box
+                        sx={{
+                          // backgroundColor: "primary.main",
 
-                        // borderRadius: '69px',
-                        width: '20rem',
-                        height: '5rem',
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        margin: '.5rem auto'
-                        // margin:"2rem 2rem"
-                      }}
-                    >
-                      <img width='30%' src={item.image} alt='safety' />
-                    </Box>
-                    <Typography
-                      variant='h6'
-                      sx={{
-                        // paddingTop: '3rem ',
-                        color: '#000000',
-                        fontFamily: 'PFDin Text,Arial,sans-serif',
-                        fontWeight: '300',
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                        margin: '1.5rem 1rem'
-                      }}
-                    >
-                      {item.title}
-                    </Typography>
-                    <Typography
+                          // borderRadius: '69px',
+                          // width: '50rem',
+                          // height: '2rem',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          // alignItems: 'center',
+                          // margin: '10rem auto'
+                          // margin:"2rem 2rem"
+                          padding: '10px'
+                        }}
+                      >
+                        <img
+                          width='300px'
+                          height='250px'
+                          style={{ borderRadius: '10px' }}
+                          src={item.image}
+                          alt='safety'
+                        />
+                      </Box>
+                      <TextStyle>
+                        <Typography
+                          variant='h5'
+                          sx={{
+                            // paddingTop: '3rem ',
+                            color: '#ffffff',
+                            fontFamily: 'PFDin Text,Arial,sans-serif',
+                            fontWeight: '700',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: '1.5rem 1rem'
+                          }}
+                        >
+                          {item.title}
+                        </Typography>
+                       
+                      </TextStyle>
+                      
+                    </ContainerStyle>
+
+                    {/* <Typography
                       variant='body1'
                       sx={{
                         paddingTop: '.5rem',
                         color: 'rgba(32,46,66,.7)',
-                        // fontFamily:"ArimaMaduraiRegular",
+                      
                         fontFamily: 'Open Sans,sans-serif',
                         fontSize: ' .875rem',
                         lineHeight: ' 1.25rem',
@@ -89,7 +116,7 @@ const Features = ({ features }) => {
                       }}
                     >
                       {item.description}
-                    </Typography>
+                    </Typography> */}
                   </Box>
                 </Grid>
               </>

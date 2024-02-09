@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <Container maxWidth="100%" sx={{ padding: "0 !important" }}>
       <Addressbar navItems={navItems} address={address} />
-      <Navbar />
+      {/* <Navbar /> */}<br></br>
       {children}
       {/* <Box sx={{marginTop:{md:0,xs:"24rem"}}}> */}
          <Footer 

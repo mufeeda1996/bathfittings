@@ -35,7 +35,7 @@ const ContactUs = () => {
             <WhatsAppIcon sx={{ color: 'primary.dark' }} />
             <Typography sx={{ fontSize: '19px', width: '250px' }}>
               {' '}
-              +971 58 560 1448
+             000000000000
             </Typography>
           </Box>
           <Box
@@ -49,7 +49,7 @@ const ContactUs = () => {
             <LanguageIcon sx={{ color: 'primary.dark' }} />
             <Typography sx={{ fontSize: '19px', width: '250px' }}>
               {' '}
-              www.lhtech-me.com
+              www.vfbgfhjhb.com
             </Typography>
           </Box>
           <Box
@@ -63,7 +63,7 @@ const ContactUs = () => {
             <AlternateEmailIcon sx={{ color: 'primary.dark' }} />
             <Typography sx={{ fontSize: '19px', width: '250px' }}>
               {' '}
-              sales@lhtech-me.com
+              sales@abc.com
             </Typography>
           </Box>
         </Grid>

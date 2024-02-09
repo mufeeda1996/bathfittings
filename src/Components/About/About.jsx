@@ -15,25 +15,24 @@ const About = ({
   hasVideo
 }) => {
   return (
-    <Box sx={{
-      // backgroundColor: '#ffffff',
-       boxShadow: '#454545 1px 2px 5px'}}>
+    <Box sx={{border:"1px black solid",padding:"1rem"}}
+       >
       <Grid
-        container
+       
         sx={{
           minHeight: { xs: '60vh', md: 'calc(100vh - 178px)' },
           justifyContent: {
             xs: 'flex-end',
             sm: 'flex-end',
-            md: 'flex-start'
+            md: 'center'
           },
           alignItems: 'center'
           // padding:"100px"
         }}
       >
-        <Grid item xs={12} sm={5} md={5} lg={5}>
+        {/* <Grid item xs={12} sm={5} md={5} lg={5}>
           <img src={image} width='100%'></img>
-        </Grid>
+        </Grid> */}
         <Grid
           item
           xs={12}
@@ -85,7 +84,7 @@ const About = ({
             transform:{md:"translatey(-20%)"},
             // marginTop:{md:"-40rem " ,lg:"0",xs:"0"}
           }}>
-        <Form/>
+        {/* <Form/> */}
         </Grid>
         
       </Grid>

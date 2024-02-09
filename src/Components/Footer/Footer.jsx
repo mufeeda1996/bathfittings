@@ -32,7 +32,7 @@ export default function Footer () {
               Contact Us
             </Typography>
             <Typography variant='body2' color='text.secondary'>
-              Email: sales@lhtech-me.com
+              Email: sales@abc-me.com
             </Typography>
             <Box
             sx={{
@@ -46,7 +46,7 @@ export default function Footer () {
             <WhatsAppIcon sx={{ color: "text.secondary" }} />
             <Typography sx={{ fontSize: "17px", width: "150px", color: "text.secondary" }}>
               {" "}
-              +971 58 560 1448
+              00000000000
             </Typography>
           </Box>
           </Grid>

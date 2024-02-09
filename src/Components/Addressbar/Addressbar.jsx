@@ -23,7 +23,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import LanguageDropdown from './Language'
-import logo from '../../Image/logo12.png'
+import logo from '../../Image/logo.png'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -85,19 +85,19 @@ export default function Addressbar ({address,navItems}) {
     setAnchorEl(event.currentTarget)
   }
 
-  const desktop = (
-    <Grid container alignItems='center' justifyContent='space-evenly'>
-      <Grid item md={2}>
+  const desktop = ( 
+    <Grid container alignItems='center' justifyContent='space-between'>
+      <Grid item md={3}>
         <Typography
           variant='h6'
           noWrap
           component='div'
-          sx={{ display: { xs: 'none', sm: 'block',marginTop:"20px" } }}
+          sx={{ display: { xs: 'none', sm: 'block',marginTop:"10px" } }}
         >
-          <img src={logo} width='150px'></img>
+          <img src={logo} width='295px'></img>
         </Typography>
       </Grid>
-      <Grid item md={4}>
+      {/* <Grid item md={4}>
         <Search>
           <SearchIconWrapper>
             <SearchIcon />
@@ -107,13 +107,13 @@ export default function Addressbar ({address,navItems}) {
             inputProps={{ 'aria-label': 'search' }}
           />
         </Search>
-        {/* </Box> */}
-      </Grid>
+       
+      </Grid> */}
 
       {/* <Box sx={{ flexGrow: 1 }} />
          <Box sx={{ display: { xs: 'none', md: 'flex' } }}> */}
       <Grid item md={3}>
-        <Box sx={{ color: 'black' }}>
+        <Box sx={{ color: '#003366' }}>
         {/* <SmartphoneIcon/><Typography> 9876543210</Typography> */}
         <Box
             sx={{
@@ -125,10 +125,10 @@ export default function Addressbar ({address,navItems}) {
               // padding: "5px",
             }}
           >
-            <WhatsAppIcon sx={{ color: "primary.dark" }} />
+            <WhatsAppIcon sx={{ color: "#003366" }} />
             <Typography sx={{ fontSize: "17px", width: "150px" }}>
               {" "}
-              +971 58 560 1448
+             000000000000
             </Typography>
           </Box>
         {/* <MailIcon/>  <Typography> abc@gmail.com</Typography> */}
@@ -142,10 +142,10 @@ export default function Addressbar ({address,navItems}) {
               // padding: "5px",
             }}
           >
-            <MailIcon sx={{ color: "primary.dark" }} />
+            <MailIcon sx={{ color: "#003366" }} />
             <Typography sx={{ fontSize: "17px", width: "250px" }}>
               {" "}
-              sales@lhtech-me.com
+              sales@wwww.com
             </Typography>
           </Box>
         </Box>
@@ -288,7 +288,7 @@ export default function Addressbar ({address,navItems}) {
 
   return (
     <Box>
-      <AppBar position='static' sx={{backgroundColor:"#ffffff"}} >
+      <AppBar position='static' sx={{backgroundColor:"#ffffff",height:'150px'}} >
         <Toolbar>{isMobile ? mobile : desktop}</Toolbar>
       </AppBar>
     </Box>

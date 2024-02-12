@@ -32,7 +32,7 @@ const Home = () => {
         isFullWidthHero={true}
         title='WHERE LUXUARY FINDS ITS HOME'
         description='We supply products & systems for companies from all over the world .'
-        description2="LH TECH LLC brings together dedicated team of experts from Oil & Gas, Marine, Lubricants, Process Packages, Power, Water, Desalination, Solar, including Sustainable Green Technology and Renewable Energy domains, in establishing projects from concept to commissioning"
+        description2="LH TECH LLC brings together dedicated to team of experts from Oil & Gas, Marine, Lubricants, Process Packages, Power, Water, Desalination, Solar, including Sustainable Green Technology and Renewable Energy domains, in establishing projects from concept to commissioning"
       />
        <Container maxWidth='lg' sx={{ margin: '3rem auto' }}>
         <Features features={features} heading={heading} subHeading={subHeading} />
